@@ -19,8 +19,8 @@ class dogcat:
     
     def load_model():
         if not os.path.isfile('model.h5'):
-            urllib.request.urlretrieve('https://github.com/tabrejml/fibrosisapp/blob/e7609b03b6cbbdc7e5aa619f2aa1d98cd9a8e955/Fibrosis_ResNet19_Model.h5', 'model.h5')
-        return tensorflow.keras.models.load_model('model.h5')
+            urllib.request.urlretrieve('https://github.com/tabrejml/fibrosisapp/blob/e7609b03b6cbbdc7e5aa619f2aa1d98cd9a8e955/Model.h5', 'Model.h5')
+        return tensorflow.keras.models.load_model('Model.h5')
 
     def predictiondogcat(self):
         # load model
