@@ -24,7 +24,7 @@ class dogcat:
     def predictiondogcat(self):
         # load model
         #model = load_model(r'/opt/render/project/src/Model.h5')
-        model = load_model('model.h5', compile=False)
+        model = keras.models.load_model('model.h5', compile=False)
 
         # summarize model
         #model.summary()
