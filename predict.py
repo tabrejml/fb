@@ -17,14 +17,10 @@ class dogcat:
     def __init__(self,filename):
         self.filename =filename
     
-    def load_model():
-        if not os.path.isfile('model.h5'):
-            urllib.request.urlretrieve('https://github.com/tabrejml/fb/blob/main/Model.h5', 'Model.h5')
-        return tensorflow.keras.models.load_model('Model.h5')
 
     def predictiondogcat(self):
         # load model
-        model = load_model(r"Model.h5")
+        model = load_model(r'/opt/render/project/src/Model.h5')
 
         # summarize model
         #model.summary()
