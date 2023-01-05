@@ -8,6 +8,7 @@ import urllib.request
 import numpy as np
 from keras.models import load_model
 from keras.preprocessing import image
+import os
 import subprocess
 if not os.path.isfile('model.h5'):
     subprocess.run(['curl --output model.h5 "https://github.com/tabrejml/fb/blob/main/Model.h5"'], shell=True)
