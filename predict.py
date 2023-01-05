@@ -9,9 +9,10 @@ import numpy as np
 from keras.models import load_model
 from keras.preprocessing import image
 import os
+import tensorflow as tf
 import subprocess
-if not os.path.isfile('model.h5'):
-    subprocess.run(['curl --output model.h5 "https://github.com/tabrejml/fb/blob/main/Model.h5"'], shell=True)
+if not os.path.isfile('Model.h5'):
+    subprocess.run(['curl --output Model.h5 "https://github.com/tabrejml/fb/blob/main/Model.h5"'], shell=True)
 
 #from tensorflow.keras.preprocessing.image import img_to_array
 #from tensorflow.keras.models import load_model
@@ -24,7 +25,7 @@ class dogcat:
     def predictiondogcat(self):
         # load model
         #model = load_model(r'/opt/render/project/src/Model.h5')
-        model = keras.models.load_model('model.h5', compile=False)
+        model = tf.keras.models.load_model('Model.h5', compile=False)
 
         # summarize model
         #model.summary()
