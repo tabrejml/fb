@@ -26,10 +26,9 @@ class dogcat:
         # load model
         #model = load_model(r'/opt/render/project/src/Model.h5')
         #model = tf.keras.models.load_model('Model.h5', compile=False)
-        MODEL_URL = "https://github.com/tabrejml/fb/blob/main/Model.h5"
-        urllib.request.urlretrieve(MODEL_URL, "Model.h5")
-        model = load_model(Path("."), "Model.h5")
-
+        MODEL_PATH = 'Model.h5'
+        model = load_model("Model.h5")
+        print('Model loaded. Start serving...')
         # summarize model
         #model.summary()
         imagename = self.filename
